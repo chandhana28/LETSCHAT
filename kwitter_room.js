@@ -31,12 +31,18 @@ function addRoom()
 
     localStorage.setItem("room_name", room_name);
 
-    window.location = "kwitter_page.html"
+    window.location = "kwitter_msg.html"
 
 }
 function redirectToRoomName(name)
 {
     console.log(name);
     localStorage.setItem("room_name", name);
-    window.location = "kwitter_page.html";
+    window.location = "kwitter_msg.html";
+}
+
+function logout(){
+    localStorage.removeItem("user_name");
+    localStorage.removeItem("room_name")
+    window.location = "index.html"
 }
